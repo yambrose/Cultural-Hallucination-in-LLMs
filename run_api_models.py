@@ -12,6 +12,10 @@ import requests
 import os
 client_openai = OpenAI()
 client_claude = anthropic.Anthropic()
+client_qwen = OpenAI(
+    api_key="sk-091029677d0e4ae7b15471cf9ae4832c",
+    base_url="https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
+)
 
 # --- Dataset file map ---
 DATASET_FILES = {
@@ -218,6 +222,13 @@ def call_api(model_tag, prompt):
 
     return "ERROR: Unknown model"
 
+def call_qwen(prompt, model="qwen-turbo"):
+    response = client_qwen.chat.completions.create(
+        model=model,
+        messages=[{"role": "user", "content": prompt}]
+    )
+    return response.choices[0].message.content
+
 def main():
     from dotenv import load_dotenv
     load_dotenv()
@@ -258,7 +269,8 @@ def main():
         else:
             prompt = template or ("Question: " + row["question"] + "\nAnswer:")
 
-        ans = call_api(args.model_tag, prompt)
+        # ans = call_api(args.model_tag, prompt)
+        ans = call_qwen(prompt, model="qwen2.5-72b-instruct")
 
         record = {
             "id": int(row["id"]),
