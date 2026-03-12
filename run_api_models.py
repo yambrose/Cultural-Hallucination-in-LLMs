@@ -12,6 +12,15 @@ import requests
 import os
 client_openai = OpenAI()
 client_claude = anthropic.Anthropic()
+client_qwen = OpenAI(
+    api_key=os.environ.get("QWEN_API_KEY"),
+    base_url="https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
+)
+client_openrouter = OpenAI(
+    api_key=os.environ.get("OPENROUTER_API_KEY"),
+    base_url="https://openrouter.ai/api/v1"
+)
+
 
 # --- Dataset file map ---
 DATASET_FILES = {
@@ -68,7 +77,7 @@ PROMPT_TEMPLATES = {
         "Provide a short, precise answer (1–5 words). "
         "If the question is in Gujarati, answer in Gujarati. "
         "If the question is in English, answer in English. "
-        "If no factual answer exists, reply exactly: No Information Available/ માહિતી ઉપલબ્ધ નથી\n\nQuestion: {question}\nAnswer:" 
+        "If no factual answer exists, reply exactly: No Information Available/ માહિતી ઉપલબ્ધ નથી\n\nQuestion: {question}\nAnswer:"
     ),
     ("nonexistent", "gu"): (
         "You are a multilingual factual QA assistant. "
@@ -76,7 +85,7 @@ PROMPT_TEMPLATES = {
         "If the question is in Gujarati, answer in Gujarati. "
         "If the question is in English, answer in English. "
         "If no factual answer exists, reply exactly: No Information Available/ માહિતી ઉપલબ્ધ નથી\n\nQuestion: {question}\nAnswer:"
-    )    
+    )
 }
 
 # def load_dataset(ds_dir, dtype, lang):
@@ -228,13 +237,25 @@ def call_api(model_tag, prompt):
         r = requests.post(TOGETHER, json=payload, headers=headers).json()
         return r["output"]["choices"][0]["text"].strip()
 
+    # --- Qwen ---
+    if model_tag in ["qwen-mt-plus"]:
+        res = client_qwen.chat.completions.create(
+            model = "qwen-mt-plus",
+            messages=[{"role": "user", "content": prompt}],
+        )
+        return res.choices[0].message.content
+
+    if model_tag in ["llama-4-maverick"]:
+        res = client_openrouter.chat.completions.create(
+            model="meta-llama/llama-4-maverick",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.0
+        )
+        return res.choices[0].message.content.strip()
+
     return "ERROR: Unknown model"
 
 def main():
-    from dotenv import load_dotenv
-    load_dotenv()
-    import os
-
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_tag", required=True)
     parser.add_argument("--dataset_type", required=True)

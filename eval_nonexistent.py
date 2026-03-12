@@ -2,7 +2,7 @@ import json
 
 # Path to your JSONL file
 # FILE_PATH = "outputs/nonexistent/en/gpt-4o.jsonl"
-FILE_PATH = "outputs/nonexistent/gu/gpt-4o.jsonl"
+FILE_PATH = "outputs/nonexistent/gu/llama-4-maverick.jsonl"
 
 REFUSALS = {
     "માહિતી ઉપલબ્ધ નથી",

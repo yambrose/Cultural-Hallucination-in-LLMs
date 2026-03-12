@@ -239,7 +239,7 @@ def main():
     df["prompt"] = df["question"]
     df["generation"] = df["model_answer"]
     df["gold_answer"] = df["gold_answer"]
- 
+
     print(f"Loaded {len(df)} examples.")
 
     client = OpenAI()
