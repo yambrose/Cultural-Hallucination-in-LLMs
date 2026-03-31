@@ -36,6 +36,9 @@ DATASET_FILES = {
     ("precise_ta", "en"): "PreciseWiki_Tamil_EN.xlsx",
     ("precise_ta", "hi"): "PreciseWiki_Tamil_HI.xlsx",
     ("precise_ta", "ta"): "PreciseWiki_Tamil_TA.xlsx",
+    ("nonexistent_ta", "en"): "NonWiki_Tamil_EN.xlsx",
+    ("nonexistent_ta", "hi"): "NonWiki_Tamil_HI.xlsx",
+    ("nonexistent_ta", "ta"): "NonWiki_Tamil_TA.xlsx",
 }
 
 # Prompt templates for dataset types
@@ -53,7 +56,7 @@ PROMPT_TEMPLATES = {
         "Provide a short, precise answer (1–5 words). "
         "If the question is in Gujarati, answer in Gujarati. "
         "If the question is in English, answer in English. "
-        "If no factual answer exists, reply exactly: No Information Available/ માહિતી ઉપલબ્ધ નથી\n\n"
+        "If no factual answer exists, reply exactly: માહિતી ઉપલબ્ધ નથી\n\n"
         "Question: {question}\nAnswer:"
     ),
     ("precise", "hi"): (
@@ -63,13 +66,6 @@ PROMPT_TEMPLATES = {
         "If the question is in English, answer in English. "
         "If no factual answer exists, reply exactly: कोई जानकारी उपलब्ध नहीं है\n\n"
         "Question: {question}\nAnswer:"
-    ),
-    ("precise", "hi"): (
-        "You are a multilingual factual QA assistant. "
-        "Provide a short, precise answer (1–5 words). "
-        "If the question is in Hindi, answer in Hindi. "
-        "If the question is in English, answer in English. "
-        "If no factual answer exists, reply exactly: No Information Available/ जानकारी उपलब्ध नहीं है\n\nQuestion: {question}\nAnswer:"
     ),
     ("longwiki_answer", "en"): (
         "I would like you to act as a factual long-form answer generator for questions related to Gujarati culture.\n"
@@ -103,14 +99,6 @@ PROMPT_TEMPLATES = {
         "If no factual answer exists, reply exactly: No Information Available/ માહિતી ઉપલબ્ધ નથી\n\n"
         "Question: {question}\nAnswer:"
     ),
-    ("nonexistent", "ta"): (
-        "You are a multilingual factual QA assistant. "
-        "Provide a short, precise answer (1–5 words). "
-        "If the question is in Gujarati, answer in Gujarati. "
-        "If the question is in English, answer in English. "
-        "If no factual answer exists, reply exactly: No Information Available/ માહિતી ઉપલબ્ધ નથી\n\n"
-        "Question: {question}\nAnswer:"
-    ),
     ("nonexistent", "hi"): (
         "You are a multilingual factual QA assistant. "
         "Provide a short, precise answer (1–5 words). "
@@ -119,7 +107,23 @@ PROMPT_TEMPLATES = {
         "If no factual answer exists, reply exactly: No Information Available/ कोई जानकारी उपलब्ध नहीं है\n\n"
         "Question: {question}\nAnswer:"
     ),
-    ("nonexistent", "ta"): (
+    ("nonexistent_ta", "en"): (
+        "You are a multilingual factual QA assistant. "
+        "Provide a short, precise answer (1–5 words). "
+        "If the question is in Gujarati, answer in Gujarati. "
+        "If the question is in English, answer in English. "
+        "If no factual answer exists, reply exactly: No Information Available/ માહિતી ઉપલબ્ધ નથી\n\n"
+        "Question: {question}\nAnswer:"
+    ),
+    ("nonexistent_ta", "hi"): (
+        "You are a multilingual factual QA assistant. "
+        "Provide a short, precise answer (1–5 words). "
+        "If the question is in Hindi, answer in Hindi. "
+        "If the question is in English, answer in English. "
+        "If no factual answer exists, reply exactly: No Information Available/ कोई जानकारी उपलब्ध नहीं है\n\n"
+        "Question: {question}\nAnswer:"
+    ),
+    ("nonexistent_ta", "ta"): (
         "You are a multilingual factual QA assistant. "
         "Provide a short, precise answer (1–5 words). "
         "If the question is in Tamil, answer in Tamil. "
