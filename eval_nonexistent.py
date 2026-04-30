@@ -1,8 +1,12 @@
 import json
+from pathlib import Path
+from datetime import datetime
 
 # Path to your JSONL file
-# FILE_PATH = "outputs/nonexistent/en/gpt-4o.jsonl"
-FILE_PATH = "outputs/nonexistent_ta/ta/qwen-mt-plus.jsonl"
+FILE_PATH = "model_outputs_gujarati/nonexistent/en/command-a.jsonl"
+
+# Report file where results will be saved/appended
+REPORT_PATH = "nonexis_evaluation_summary.txt"
 
 REFUSALS = {
     "માહિતી ઉપલબ્ધ નથી",
@@ -30,6 +34,16 @@ with open(FILE_PATH, "r", encoding="utf-8") as f:
 
 percentage = (non_refusal / total) * 100 if total > 0 else 0.0
 
+# Console output
 print(f"Total questions: {total}")
 print(f"Non-refusal answers: {non_refusal}")
 print(f"Non-refusal percentage: {percentage:.2f}%")
+
+# Append results to report file
+with open(REPORT_PATH, "a", encoding="utf-8") as report:
+    report.write("=" * 60 + "\n")
+    report.write(f"File path: {FILE_PATH}\n")
+    report.write(f"Run time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+    report.write(f"Total questions: {total}\n")
+    report.write(f"Non-refusal answers: {non_refusal}\n")
+    report.write(f"Non-refusal percentage: {percentage:.2f}%\n\n")

@@ -1,0 +1,20 @@
+============================================================
+File path: model_outputs_gujarati/nonexistent/en/gpt-5.jsonl
+Run time: 2026-04-30 10:59:43
+Total questions: 200
+Non-refusal answers: 151
+Non-refusal percentage: 75.50%
+
+============================================================
+File path: model_outputs_gujarati/nonexistent/en/command-a.jsonl
+Run time: 2026-04-30 10:59:58
+Total questions: 200
+Non-refusal answers: 75
+Non-refusal percentage: 37.50%
+
+============================================================
+File path: model_outputs_gujarati/nonexistent/en/claude-sonnet-4-6.jsonl
+Run time: 2026-04-30 10:59:27
+Total questions: 200
+Non-refusal answers: 53
+Non-refusal percentage: 26.50%

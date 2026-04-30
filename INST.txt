@@ -4,7 +4,64 @@ Change the evaluation model in run_api_models.py to whatever model you want to c
 
 python run_api_models.py --model_tag gpt-5 --dataset_type precise --lang en
 python run_api_models.py --model_tag gpt-5 --dataset_type precise --lang gu
+python run_api_models.py --model_tag gpt-5 --dataset_type precise --lang hi
+
+python run_api_models.py --model_tag gpt-5 --dataset_type nonexistent --lang en
+python run_api_models.py --model_tag gpt-5 --dataset_type nonexistent --lang gu
+python run_api_models.py --model_tag gpt-5 --dataset_type nonexistent --lang hi
+
+python run_api_models.py --model_tag gpt-5 --dataset_type precise_ta --lang en
+python run_api_models.py --model_tag gpt-5 --dataset_type precise_ta --lang ta
+python run_api_models.py --model_tag gpt-5 --dataset_type precise_ta --lang hi
+
+python run_api_models.py --model_tag gpt-5 --dataset_type nonexistent_ta --lang en
+python run_api_models.py --model_tag gpt-5 --dataset_type nonexistent_ta --lang ta
+python run_api_models.py --model_tag gpt-5 --dataset_type nonexistent_ta --lang hi
+
+------ claude commands
+python run_api_models.py --model_tag claude-sonnet-4-6 --dataset_type precise --lang en
+python run_api_models.py --model_tag claude-sonnet-4-6 --dataset_type precise --lang gu
+python run_api_models.py --model_tag claude-sonnet-4-6 --dataset_type precise --lang hi
+
+python run_api_models.py --model_tag claude-sonnet-4-6 --dataset_type nonexistent --lang en
+python run_api_models.py --model_tag claude-sonnet-4-6 --dataset_type nonexistent --lang gu
+python run_api_models.py --model_tag claude-sonnet-4-6 --dataset_type nonexistent --lang hi
+
+python run_api_models.py --model_tag claude-sonnet-4-6 --dataset_type precise_ta --lang en
+python run_api_models.py --model_tag claude-sonnet-4-6 --dataset_type precise_ta --lang ta
+python run_api_models.py --model_tag claude-sonnet-4-6 --dataset_type precise_ta --lang hi
+
+python run_api_models.py --model_tag claude-sonnet-4-6 --dataset_type nonexistent_ta --lang en
+python run_api_models.py --model_tag claude-sonnet-4-6 --dataset_type nonexistent_ta --lang ta
+python run_api_models.py --model_tag claude-sonnet-4-6 --dataset_type nonexistent_ta --lang hi
+
+#### command a
+C:\Users\mathu\miniconda3\python.exe run_api_models.py --model_tag command-a --dataset_type precise --lang en
+python run_api_models.py --model_tag command-a --dataset_type nonexistent --lang en
+
+python run_api_models.py --model_tag command-a --dataset_type precise --lang en
+
+C:\Users\mathu\miniconda3\python.exe run_api_models.py --model_tag command-a --dataset_type nonexistent --lang en
+C:\Users\mathu\miniconda3\python.exe run_api_models_with_aya.py --model_tag command-a --dataset_type nonexistent --lang gu
+C:\Users\mathu\miniconda3\python.exe run_api_models_with_aya.py --model_tag command-a --dataset_type nonexistent --lang hi
 
 2. Then run evaluation:
 python eval_precisewiki.py --data_path outputs/precise/en/gpt-5.jsonl --judge_model gpt-4.1
 python eval_precisewiki.py --data_path outputs/precise/gu/gpt-5.jsonl --judge_model gpt-4.1
+python eval_precisewiki.py --data_path outputs/precise/ta/gpt-5.jsonl --judge_model gpt-4.1
+
+python eval_precisewiki.py --data_path outputs/precise/en/aya101.jsonl --judge_model gpt-4.1
+python eval_precisewiki.py --data_path outputs/precise/hi/aya101.jsonl --judge_model gpt-4.1
+python eval_precisewiki.py --data_path outputs/precise/ta/aya101.jsonl --judge_model gpt-4.1
+
+python eval_precisewiki.py --data_path outputs/precise/en/claude-sonnet-4-6.jsonl --judge_model gpt-4.1
+python eval_precisewiki.py --data_path outputs/precise/ta/claude-sonnet-4-6.jsonl --judge_model gpt-4.1
+python eval_precisewiki.py --data_path outputs/precise/hi/claude-sonnet-4-6.jsonl --judge_model gpt-4.1
+
+python eval_precisewiki.py --data_path outputs_gujarati/precise/en/command-a.jsonl --judge_model gpt-4.1 --save_dir eval_outputs_gujarati
+python eval_precisewiki.py --data_path outputs_gujarati/precise/gu/command-a.jsonl --judge_model gpt-4.1 --save_dir eval_outputs_gujarati
+python eval_precisewiki.py --data_path outputs_gujarati/precise/hi/command-a.jsonl --judge_model gpt-4.1 --save_dir eval_outputs_gujarati
+
+python eval_precisewiki.py --data_path outputs/precise/en/command-a.jsonl --judge_model gpt-4.1 --save_dir eval_outputs
+python eval_precisewiki.py --data_path outputs/precise/ta/command-a.jsonl --judge_model gpt-4.1 --save_dir eval_outputs
+python eval_precisewiki.py --data_path outputs/precise/hi/command-a.jsonl --judge_model gpt-4.1 --save_dir eval_outputs

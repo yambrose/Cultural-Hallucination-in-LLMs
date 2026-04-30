@@ -9,6 +9,7 @@ from tqdm import tqdm
 from openai import OpenAI
 import anthropic
 import os
+# import cohere
 
 client_openai = OpenAI()
 client_claude = anthropic.Anthropic()
@@ -20,18 +21,18 @@ client_openrouter = OpenAI(
     api_key=os.environ.get("OPENROUTER_API_KEY"),
     base_url="https://openrouter.ai/api/v1"
 )
-
+# client_cohere = cohere.ClientV2(api_key=os.getenv("COHERE_API_KEY"))
 
 # --- Dataset file map ---
 DATASET_FILES = {
     ("precise", "en"): "PreciseWikiQA_EN.xlsx",
     ("precise", "gu"): "PreciseWikiQA_GU.xlsx",
     ("precise", "hi"): "PreciseWikiQA_HI.xlsx",
-    ("longwiki", "en"): "LongWikiQA_EN.xlsx",
-    ("longwiki", "ta"): "LongWikiQA_GU.xlsx",
-    ("nonexistent", "en"): "NonExistent_EN.xlsx",
-    ("nonexistent", "ta"): "NonExistent_GU.xlsx",
-    ("nonexistent", "hi"): "NonExistent_HI.xlsx",
+    ("nonexistent", "en"): "IndicNonExi-Guj_EN.xlsx",
+    ("nonexistent", "gu"): "IndicNonExi-Guj_GU.xlsx",
+    ("nonexistent", "hi"): "IndicNonExi-Guj_HI.xlsx",
+
+    ################# TAMIL DATASETS ##################
     ("precise_ta", "en"): "PreciseWiki_Tamil_EN.xlsx",
     ("precise_ta", "hi"): "PreciseWiki_Tamil_HI.xlsx",
     ("precise_ta", "ta"): "PreciseWiki_Tamil_TA.xlsx",
@@ -45,89 +46,86 @@ PROMPT_TEMPLATES = {
     ("precise", "en"): (
         "You are a multilingual factual QA assistant. "
         "Provide a short, precise answer (1–5 words). "
-        "If the question is in Gujarati, answer in Gujarati. "
         "If the question is in English, answer in English. "
-        "If no factual answer exists, reply exactly: No Information Available\n\n"
+        "If no factual answer exists or you don't know the answer, reply exactly: No Information Available\n\n"
         "Question: {question}\nAnswer:"
     ),
     ("precise", "gu"): (
         "You are a multilingual factual QA assistant. "
         "Provide a short, precise answer (1–5 words). "
         "If the question is in Gujarati, answer in Gujarati. "
-        "If the question is in English, answer in English. "
-        "If no factual answer exists, reply exactly: માહિતી ઉપલબ્ધ નથી\n\n"
+        "If no factual answer exists or you don't know the answer, reply exactly: માહિતી ઉપલબ્ધ નથી\n\n"
         "Question: {question}\nAnswer:"
     ),
     ("precise", "hi"): (
         "You are a multilingual factual QA assistant. "
         "Provide a short, precise answer (1–5 words). "
         "If the question is in Hindi, answer in Hindi. "
-        "If the question is in English, answer in English. "
-        "If no factual answer exists, reply exactly: कोई जानकारी उपलब्ध नहीं है\n\n"
+        "If no factual answer exists or you don't know the answer, reply exactly: कोई जानकारी उपलब्ध नहीं है\n\n"
         "Question: {question}\nAnswer:"
-    ),
-    ("longwiki_answer", "en"): (
-        "I would like you to act as a factual long-form answer generator for questions related to Gujarati culture.\n"
-        "Your goal is to produce one detailed, factual answer grounded strictly in a relevant Wikipedia article.\n\n"
-        "You should identify one Wikipedia article that directly supports the user’s question — for example, related to Gujarati food, festivals, geography, politics, holidays, education, family life, or traditional practices — and use only that article as your factual source.\n\n"
-        "Requirements for the Answer:\n\n"
-        "1. The answer must be fully supported by the selected Wikipedia article, without using external knowledge or assumptions.\n\n"
-        "2. The answer must be written in clear English and contain multiple sentences (≥2), providing factual detail and depth.\n\n"
-        "3. The answer should be objective, neutral, and descriptive, avoiding interpretations, opinions, or invented information.\n\n"
-        "4. Use transliterated Gujarati terms only if they appear in the Wikipedia article or are explicitly justified by it.\n\n"
-        "5. Do not include citations, bullet points, or meta-commentary — output only the final factual answer.\n"
-        "6. If no factual answer exists, reply exactly: No Information Available/ માહિતી ઉપલબ્ધ નથી\n\nQuestion: {question}\nAnswer:"
-    ),
-    ("longwiki", "ta"): (
-        "I would like you to act as a factual long-form answer generator for questions related to Gujarati culture.\n"
-        "Your goal is to produce one detailed, factual answer grounded strictly in a relevant Wikipedia article.\n\n"
-        "You should identify one Wikipedia article that directly supports the user’s question — for example, related to Gujarati food, festivals, geography, politics, holidays, education, family life, or traditional practices — and use only that article as your factual source.\n\n"
-        "Requirements for the Answer:\n\n"
-        "1. The answer must be fully supported by the selected Wikipedia article, without using external knowledge or assumptions.\n\n"
-        "2. The answer must be written in clear Gujarati and contain multiple sentences (≥2), providing factual detail and depth.\n\n"
-        "3. The answer should be objective, neutral, and descriptive, avoiding interpretations, opinions, or invented information.\n\n"
-        "4. Use transliterated Gujarati terms only if they appear in the Wikipedia article or are explicitly justified by it.\n\n"
-        "5. Do not include citations, bullet points, or meta-commentary — output only the final factual answer.\n"
-        "6. If no factual answer exists, reply exactly: No Information Available/ માહિતી ઉપલબ્ધ નથી\n\nQuestion: {question}\nAnswer:"
     ),
     ("nonexistent", "en"): (
         "You are a multilingual factual QA assistant. "
         "Provide a short, precise answer (1–5 words). "
-        "If the question is in Gujarati, answer in Gujarati. "
         "If the question is in English, answer in English. "
-        "If no factual answer exists, reply exactly: No Information Available/ માહિતી ઉપલબ્ધ નથી\n\n"
+        "If no factual answer exists, OR you don't know the answer reply exactly: No Information Available\n\n"
+        "Question: {question}\nAnswer:"
+    ),
+    ("nonexistent", "gu"): (
+        "You are a multilingual factual QA assistant. "
+        "Provide a short, precise answer (1–5 words). "
+        "If the question is in Gujarati, answer in Gujarati. "
+        "If no factual answer exists, OR you don't know the answer reply exactly: માહિતી ઉપલબ્ધ નથી\n\n"
         "Question: {question}\nAnswer:"
     ),
     ("nonexistent", "hi"): (
         "You are a multilingual factual QA assistant. "
         "Provide a short, precise answer (1–5 words). "
         "If the question is in Hindi, answer in Hindi. "
+        "If no factual answer exists, OR you don't know the answer reply exactly: कोई जानकारी उपलब्ध नहीं है\n\n"
+        "Question: {question}\nAnswer:"
+    ),
+    ################## TAMIL DATASETS ##################
+    ("precise_ta", "en"): (
+        "You are a multilingual factual QA assistant. "
+        "Provide a short, precise answer (1–5 words). "
         "If the question is in English, answer in English. "
-        "If no factual answer exists, reply exactly: No Information Available/ कोई जानकारी उपलब्ध नहीं है\n\n"
+        "If no factual answer exists or you don't know the answer, reply exactly: No Information Available\n\n"
+        "Question: {question}\nAnswer:"
+    ),
+    ("precise_ta", "ta"): (
+        "You are a multilingual factual QA assistant. "
+        "Provide a short, precise answer (1–5 words). "
+        "If the question is in Tamil, answer in Tamil. "
+        "If no factual answer exists or you don't know the answer, reply exactly: தகவல் இல்லை\n\n"
+        "Question: {question}\nAnswer:"
+    ),
+    ("precise_ta", "hi"): (
+        "You are a multilingual factual QA assistant. "
+        "Provide a short, precise answer (1–5 words). "
+        "If the question is in Hindi, answer in Hindi. "
+        "If no factual answer exists or you don't know the answer, reply exactly: कोई जानकारी उपलब्ध नहीं है\n\n"
         "Question: {question}\nAnswer:"
     ),
     ("nonexistent_ta", "en"): (
         "You are a multilingual factual QA assistant. "
         "Provide a short, precise answer (1–5 words). "
-        "If the question is in Gujarati, answer in Gujarati. "
         "If the question is in English, answer in English. "
-        "If no factual answer exists, reply exactly: No Information Available/ માહિતી ઉપલબ્ધ નથી\n\n"
+        "If no factual answer exists, OR you don't know the answer reply exactly: No Information Available\n\n"
         "Question: {question}\nAnswer:"
     ),
     ("nonexistent_ta", "hi"): (
         "You are a multilingual factual QA assistant. "
         "Provide a short, precise answer (1–5 words). "
         "If the question is in Hindi, answer in Hindi. "
-        "If the question is in English, answer in English. "
-        "If no factual answer exists, reply exactly: No Information Available/ कोई जानकारी उपलब्ध नहीं है\n\n"
+        "If no factual answer exists, OR you don't know the answer reply exactly: कोई जानकारी उपलब्ध नहीं है\n\n"
         "Question: {question}\nAnswer:"
     ),
     ("nonexistent_ta", "ta"): (
         "You are a multilingual factual QA assistant. "
         "Provide a short, precise answer (1–5 words). "
         "If the question is in Tamil, answer in Tamil. "
-        "If the question is in English, answer in English. "
-        "If no factual answer exists, reply exactly: தகவல் இல்லை\n\n"
+        "If no factual answer exists, OR you don't know the answer reply exactly: தகவல் இல்லை\n\n"
         "Question: {question}\nAnswer:"
     ),
 }
@@ -265,12 +263,12 @@ def call_api(model_tag, prompt):
         res = client_openai.chat.completions.create(
             model="gpt-5",
             messages=[{"role": "user", "content": prompt}],
-            temperature=1.0
+            temperature=0.0
         )
         return res.choices[0].message.content.strip()
 
     # --- Claude ---
-    if model_tag in ["claude-sonnet-4-6", "claude-3-sonnet"]:
+    if model_tag in ["claude-sonnet-4-6"]:
         res = client_claude.messages.create(
             model="claude-sonnet-4-6",
             max_tokens=256,
@@ -279,6 +277,16 @@ def call_api(model_tag, prompt):
         )
         return res.content[0].text.strip()
 
+    # --- Cohere Command-A ---
+    # if model_tag == "command-a":
+    #         res = client_cohere.chat(
+    #             model="command-a-03-2025",
+    #             messages=[{"role": "user", "content": prompt}],
+    #             temperature=0.0,
+    #             max_tokens=64
+    #         )
+    #         return res.message.content[0].text.strip()
+        
     # --- Qwen ---
     if model_tag in ["qwen-mt-plus"]:
         res = client_qwen.chat.completions.create(
@@ -316,11 +324,26 @@ def main():
     print("Loaded", len(ds_df), "rows")
     print("Columns:", list(ds_df.columns))
 
-    out_dir = base / "outputs" / args.dataset_type / args.lang
+
+    # ---------------- Output folder by culture ----------------
+    if args.dataset_type in ["precise", "nonexistent"]:
+        culture_output_dir = "model_outputs_gujarati"
+    elif args.dataset_type in ["precise_ta", "nonexistent_ta"]:
+        culture_output_dir = "model_outputs_tamil"
+    else:
+        raise ValueError(f"Unknown dataset type: {args.dataset_type}")
+
+    out_dir = base / culture_output_dir / args.dataset_type / args.lang
     out_dir.mkdir(parents=True, exist_ok=True)
 
     out_path = out_dir / f"{args.model_tag}.jsonl"
     done_ids = set()
+
+    if (args.dataset_type, args.lang) not in DATASET_FILES:
+        raise ValueError(
+            f"Invalid combination: dataset_type={args.dataset_type}, lang={args.lang}. "
+            f"Valid combinations are: {list(DATASET_FILES.keys())}"
+        )
 
     if out_path.exists():
         with out_path.open("r", encoding="utf-8") as fin:
