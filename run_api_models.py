@@ -172,9 +172,15 @@ def load_dataset(ds_dir, dtype, lang):
 
     # ---------------- GUJARATI ----------------
     elif lang == "gu":
-        q_col = "question"
-        a_col = "gold_answer"
-        d_col = "domain"
+        # Expected Hindi column names after your translation step
+        q_candidates = ["question_hindi", "questions", "Question", "question"]
+        a_candidates = ["answer_hindi", "gold_answer", "answer"]
+        d_candidates = ["domain_hindi", "domain", "category"]
+
+        q_col = next((c for c in q_candidates if c in df.columns), None)
+        a_col = next((c for c in a_candidates if c in df.columns), None)
+        d_col = next((c for c in d_candidates if c in df.columns), None)
+
 
         if q_col not in df.columns:
             raise ValueError(f"Expected '{q_col}' in Gujarati file. Found: {list(df.columns)}")
@@ -197,7 +203,7 @@ def load_dataset(ds_dir, dtype, lang):
     # ---------------- HINDI ----------------
     elif lang == "hi":
         # Expected Hindi column names after your translation step
-        q_candidates = ["question_hindi", "question", "Question"]
+        q_candidates = ["question_hindi", "question", "Question", "questions"]
         a_candidates = ["answer_hindi", "gold_answer", "answer"]
         d_candidates = ["domain_hindi", "domain", "category"]
 
@@ -225,7 +231,7 @@ def load_dataset(ds_dir, dtype, lang):
 
     # ---------------- TAMIL ----------------
     elif lang == "ta":
-        q_candidates = ["question_tamil", "question", "Question"]
+        q_candidates = ["question_tamil", "question", "Question", "questions"]
         a_candidates = ["answer_tamil", "gold_answer", "answer"]
         d_candidates = ["domain_tamil", "domain", "category"]
 
@@ -263,7 +269,7 @@ def call_api(model_tag, prompt):
         res = client_openai.chat.completions.create(
             model="gpt-5",
             messages=[{"role": "user", "content": prompt}],
-            temperature=0.0
+            temperature=1.0
         )
         return res.choices[0].message.content.strip()
 
