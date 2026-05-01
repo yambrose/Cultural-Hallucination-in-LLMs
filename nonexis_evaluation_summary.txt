@@ -18,3 +18,45 @@ Run time: 2026-04-30 10:59:27
 Total questions: 200
 Non-refusal answers: 53
 Non-refusal percentage: 26.50%
+============================================================
+File path: model_outputs_gujarati/nonexistent/gu/claude-sonnet-4-6.jsonl
+Run time: 2026-04-30 16:46:22
+Total questions: 200
+Non-refusal answers: 85
+Non-refusal percentage: 42.50%
+
+============================================================
+File path: model_outputs_gujarati/nonexistent/gu/command-a.jsonl
+Run time: 2026-05-01 11:36:30
+Total questions: 200
+Non-refusal answers: 76
+Non-refusal percentage: 38.00%
+
+============================================================
+File path: model_outputs_gujarati/nonexistent/gu/gpt-5.jsonl
+Run time: 2026-05-01 11:37:14
+Total questions: 200
+Non-refusal answers: 143
+Non-refusal percentage: 71.50%
+
+============================================================
+File path: model_outputs_gujarati/nonexistent/hi/gpt-5.jsonl
+Run time: 2026-05-01 15:06:54
+Total questions: 200
+Non-refusal answers: 129
+Non-refusal percentage: 64.50%
+
+============================================================
+File path: model_outputs_gujarati/nonexistent/hi/command-a.jsonl
+Run time: 2026-05-01 15:07:13
+Total questions: 200
+Non-refusal answers: 99
+Non-refusal percentage: 49.50%
+
+============================================================
+File path: model_outputs_gujarati/nonexistent/hi/claude-sonnet-4-6.jsonl
+Run time: 2026-05-01 15:07:38
+Total questions: 200
+Non-refusal answers: 78
+Non-refusal percentage: 39.00%
+
