@@ -25,20 +25,20 @@ client_openrouter = OpenAI(
 
 # --- Dataset file map ---
 DATASET_FILES = {
-    ("precise", "en"): "PreciseWikiQA_EN.xlsx",
-    ("precise", "gu"): "PreciseWikiQA_GU.xlsx",
-    ("precise", "hi"): "PreciseWikiQA_HI.xlsx",
+    ("precise", "en"): "IndicWikiQA-Guj_EN.xlsx",
+    ("precise", "gu"): "IndicWikiQA-Guj_GU.xlsx",
+    ("precise", "hi"): "IndicWikiQA-Guj_HI.xlsx",
     ("nonexistent", "en"): "IndicNonExi-Guj_EN.xlsx",
     ("nonexistent", "gu"): "IndicNonExi-Guj_GU.xlsx",
     ("nonexistent", "hi"): "IndicNonExi-Guj_HI.xlsx",
 
     ################# TAMIL DATASETS ##################
-    ("precise_ta", "en"): "PreciseWiki_Tamil_EN.xlsx",
-    ("precise_ta", "hi"): "PreciseWiki_Tamil_HI.xlsx",
-    ("precise_ta", "ta"): "PreciseWiki_Tamil_TA.xlsx",
-    ("nonexistent_ta", "en"): "NonWiki_Tamil_EN.xlsx",
-    ("nonexistent_ta", "hi"): "NonWiki_Tamil_HI.xlsx",
-    ("nonexistent_ta", "ta"): "NonWiki_Tamil_TA.xlsx",
+    ("precise_ta", "en"): "IndicWikiQA-Tam_EN.xlsx",
+    ("precise_ta", "hi"): "IndicWikiQA-Tam_HI.xlsx",
+    ("precise_ta", "ta"): "IndicWikiQA-Tam_TA.xlsx",
+    ("nonexistent_ta", "en"): "IndicNonExi-Tam_EN.xlsx",
+    ("nonexistent_ta", "hi"): "IndicNonExi-Tam_HI.xlsx",
+    ("nonexistent_ta", "ta"): "IndicNonExi-Tam_TA.xlsx",
 }
 
 # Prompt templates for dataset types
