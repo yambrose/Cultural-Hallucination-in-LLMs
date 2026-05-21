@@ -1,0 +1,3 @@
+culture,dataset_type,total,refusals,non_refusals,hallucinations,hallucinations_not_refused,correct,refusal_rate,hallucination_rate_not_refused,hallucination_rate_all,correct_rate
+gujarati,precise,4500,120,4380,1621,1505,2879,0.0267,0.3436,0.3602,0.6398
+tamil,precise,1332,16,1316,713,697,619,0.0120,0.5296,0.5353,0.4647

@@ -1,3 +1,5 @@
 .idea
 .env
 nonwiki_graph_code.ipynb
+__pycache__/
+*.pyc
