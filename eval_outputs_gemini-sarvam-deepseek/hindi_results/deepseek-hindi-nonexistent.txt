@@ -1,0 +1,3 @@
+Total questions: 200
+Non-refusal answers: 187
+Non-refusal percentage: 93.50%
