@@ -1,8 +1,8 @@
 {
   "judge_model": "gpt-5.1",
   "false_refusal": 0.0,
-  "hallu_rate_not_abstain": 0.652,
-  "correct_rate": 0.348,
+  "hallu_rate_not_abstain": 0.644,
+  "correct_rate": 0.356,
   "details": [
     {
       "id": 0,
@@ -180,9 +180,9 @@
       "gold_answer": "શાકાહારી",
       "model_answer": "શાકાહારી અને સંતુલિત આહાર",
       "is_abstaining": false,
-      "is_hallucinated": true,
+      "is_hallucinated": false,
       "abstain_judge_raw": "{ \"is_abstaining\": false }",
-      "hallu_judge_raw": "INCORRECT"
+      "hallu_judge_raw": "CORRECT"
     },
     {
       "id": 18,
@@ -600,9 +600,9 @@
       "gold_answer": "તિલક લગાવો અને મીઠાઈ અર્પણ કરો",
       "model_answer": "ભાઈને તિલક કરે છે/Brother gets tilak.",
       "is_abstaining": false,
-      "is_hallucinated": true,
+      "is_hallucinated": false,
       "abstain_judge_raw": "{ \"is_abstaining\": false }",
-      "hallu_judge_raw": "INCORRECT"
+      "hallu_judge_raw": "CORRECT"
     },
     {
       "id": 60,
@@ -870,9 +870,9 @@
       "gold_answer": "જલારામ જયંતિ મેળો",
       "model_answer": "જલારામ મેળો/Jalaram Fair",
       "is_abstaining": false,
-      "is_hallucinated": true,
+      "is_hallucinated": false,
       "abstain_judge_raw": "{ \"is_abstaining\": false }",
-      "hallu_judge_raw": "INCORRECT"
+      "hallu_judge_raw": "CORRECT"
     },
     {
       "id": 87,
@@ -1420,9 +1420,9 @@
       "gold_answer": "મરીન નેશનલ પાર્ક (કચ્છનો અખાત)",
       "model_answer": "સર કોવ રાષ્ટ્રીય ઉદ્યાન/ Gulf of Kutch National Park",
       "is_abstaining": false,
-      "is_hallucinated": true,
+      "is_hallucinated": false,
       "abstain_judge_raw": "{ \"is_abstaining\": false }",
-      "hallu_judge_raw": "INCORRECT"
+      "hallu_judge_raw": "CORRECT"
     },
     {
       "id": 142,
@@ -2220,9 +2220,9 @@
       "gold_answer": "સ્ટેચ્યુ ઓફ યુનિટી વ્યુ ગેલેરી",
       "model_answer": "સ્ટેચ્યુ ઓફ યુનિટી",
       "is_abstaining": false,
-      "is_hallucinated": false,
+      "is_hallucinated": true,
       "abstain_judge_raw": "{ \"is_abstaining\": false }",
-      "hallu_judge_raw": "CORRECT"
+      "hallu_judge_raw": "INCORRECT"
     },
     {
       "id": 222,
@@ -2390,9 +2390,9 @@
       "gold_answer": "કચ્છ",
       "model_answer": "જાડેજા વંશનું કચ્છમાં શાસન હતું. / The Jadeja dynasty ruled in Kutch.",
       "is_abstaining": false,
-      "is_hallucinated": false,
+      "is_hallucinated": true,
       "abstain_judge_raw": "{ \"is_abstaining\": false }",
-      "hallu_judge_raw": "CORRECT"
+      "hallu_judge_raw": "INCORRECT"
     },
     {
       "id": 239,
