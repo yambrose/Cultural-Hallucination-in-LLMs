@@ -222,7 +222,7 @@ def main():
     parser.add_argument(
         "--save_dir",
         type=str,
-        default="eval_outputs",
+        default="judge_results/guj/en",
         help="Where to save per-example results.",
     )
     args = parser.parse_args()

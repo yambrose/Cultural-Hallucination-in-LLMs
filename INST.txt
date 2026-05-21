@@ -70,3 +70,10 @@ python eval_precisewiki.py --data_path outputs_gujarati/precise/hi/command-a.jso
 python eval_precisewiki.py --data_path outputs/precise/en/command-a.jsonl --judge_model gpt-4.1 --save_dir eval_outputs
 python eval_precisewiki.py --data_path outputs/precise/ta/command-a.jsonl --judge_model gpt-4.1 --save_dir eval_outputs
 python eval_precisewiki.py --data_path outputs/precise/hi/command-a.jsonl --judge_model gpt-4.1 --save_dir eval_outputs
+
+
+python eval_precisewiki.py --data_path model_outputs_gujarati/precise/en/sarvam-105b.jsonl --save_dir judge_results/guj/en --judge_model gpt-4.1
+
+python eval_precisewiki.py --data_path model_outputs_gujarati/precise/hi/sarvam-105b.jsonl --save_dir judge_results/guj/hi --judge_model gpt-4.1
+
+python eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/ta/sarvam-105b.jsonl --save_dir judge_results/tam/ta --judge_model gpt-4.1
