@@ -1,0 +1,640 @@
+Running: python3 eval_precisewiki.py --data_path model_outputs_gujarati/precise/gu/deepseek-v4-flash.jsonl --save_dir judge_results_new/guj/gu --judge_model gpt-4.1
+Loading data from model_outputs_gujarati/precise/gu/deepseek-v4-flash.jsonl ...
+Loaded 250 examples.
+Abstention eval: 100%|███████████████████████████████████| 250/250 [02:15<00:00,  1.84it/s]
+Hallucination eval: 100%|████████████████████████████████| 250/250 [03:21<00:00,  1.24it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: deepseek-v4-flash
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 250
+False Refusal (%):      2.80
+Hallu (not abstain, %): 18.52
+Correct (%):             79.20
+Per-example JSON saved to: judge_results_new/guj/gu/results_deepseek-v4-flash_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_gujarati/precise/gu/sarvam-105b.jsonl --save_dir judge_results_new/guj/gu --judge_model gpt-4.1
+Loading data from model_outputs_gujarati/precise/gu/sarvam-105b.jsonl ...
+Loaded 250 examples.
+Abstention eval: 100%|███████████████████████████████████| 250/250 [02:39<00:00,  1.57it/s]
+Hallucination eval: 100%|████████████████████████████████| 250/250 [02:24<00:00,  1.73it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: sarvam-105b
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 250
+False Refusal (%):      0.40
+Hallu (not abstain, %): 28.11
+Correct (%):             71.60
+Per-example JSON saved to: judge_results_new/guj/gu/results_sarvam-105b_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_gujarati/precise/gu/gpt-5.jsonl --save_dir judge_results_new/guj/gu --judge_model gpt-4.1
+Loading data from model_outputs_gujarati/precise/gu/gpt-5.jsonl ...
+Loaded 250 examples.
+Abstention eval: 100%|███████████████████████████████████| 250/250 [02:34<00:00,  1.61it/s]
+Hallucination eval: 100%|████████████████████████████████| 250/250 [03:38<00:00,  1.14it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: gpt-5
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 250
+False Refusal (%):      0.80
+Hallu (not abstain, %): 21.37
+Correct (%):             78.00
+Per-example JSON saved to: judge_results_new/guj/gu/results_gpt-5_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_gujarati/precise/gu/claude-sonnet-4-6.jsonl --save_dir judge_results_new/guj/gu --judge_model gpt-4.1
+Loading data from model_outputs_gujarati/precise/gu/claude-sonnet-4-6.jsonl ...
+Loaded 250 examples.
+Abstention eval: 100%|███████████████████████████████████| 250/250 [02:20<00:00,  1.78it/s]
+Hallucination eval: 100%|████████████████████████████████| 250/250 [02:47<00:00,  1.49it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: claude-sonnet-4-6
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 250
+False Refusal (%):      0.00
+Hallu (not abstain, %): 20.00
+Correct (%):             80.00
+Per-example JSON saved to: judge_results_new/guj/gu/results_claude-sonnet-4-6_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_gujarati/precise/gu/gemini-2.5-flash.jsonl --save_dir judge_results_new/guj/gu --judge_model gpt-4.1
+Loading data from model_outputs_gujarati/precise/gu/gemini-2.5-flash.jsonl ...
+Loaded 250 examples.
+Abstention eval: 100%|███████████████████████████████████| 250/250 [02:21<00:00,  1.76it/s]
+Hallucination eval: 100%|████████████████████████████████| 250/250 [02:32<00:00,  1.64it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: gemini-2.5-flash
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 250
+False Refusal (%):      2.00
+Hallu (not abstain, %): 18.37
+Correct (%):             80.00
+Per-example JSON saved to: judge_results_new/guj/gu/results_gemini-2.5-flash_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_gujarati/precise/gu/command-a.jsonl --save_dir judge_results_new/guj/gu --judge_model gpt-4.1
+Loading data from model_outputs_gujarati/precise/gu/command-a.jsonl ...
+Loaded 250 examples.
+Abstention eval: 100%|███████████████████████████████████| 250/250 [02:19<00:00,  1.79it/s]
+Hallucination eval: 100%|████████████████████████████████| 250/250 [02:27<00:00,  1.69it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: command-a
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 250
+False Refusal (%):      14.80
+Hallu (not abstain, %): 56.34
+Correct (%):             38.40
+Per-example JSON saved to: judge_results_new/guj/gu/results_command-a_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_gujarati/precise/gu/qwen-mt-plus.jsonl --save_dir judge_results_new/guj/gu --judge_model gpt-4.1
+Loading data from model_outputs_gujarati/precise/gu/qwen-mt-plus.jsonl ...
+Loaded 250 examples.
+Abstention eval: 100%|███████████████████████████████████| 250/250 [02:12<00:00,  1.89it/s]
+Hallucination eval: 100%|████████████████████████████████| 250/250 [04:09<00:00,  1.00it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: qwen-mt-plus
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 250
+False Refusal (%):      0.00
+Hallu (not abstain, %): 60.40
+Correct (%):             39.60
+Per-example JSON saved to: judge_results_new/guj/gu/results_qwen-mt-plus_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_gujarati/precise/gu/llama-4-maverick.jsonl --save_dir judge_results_new/guj/gu --judge_model gpt-4.1
+Loading data from model_outputs_gujarati/precise/gu/llama-4-maverick.jsonl ...
+Loaded 250 examples.
+Abstention eval: 100%|███████████████████████████████████| 250/250 [02:52<00:00,  1.45it/s]
+Hallucination eval: 100%|████████████████████████████████| 250/250 [03:33<00:00,  1.17it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: llama-4-maverick
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 250
+False Refusal (%):      0.00
+Hallu (not abstain, %): 35.20
+Correct (%):             64.80
+Per-example JSON saved to: judge_results_new/guj/gu/results_llama-4-maverick_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_gujarati/precise/hi/deepseek-v4-flash.jsonl --save_dir judge_results_new/guj/hi --judge_model gpt-4.1
+Loading data from model_outputs_gujarati/precise/hi/deepseek-v4-flash.jsonl ...
+Loaded 250 examples.
+Abstention eval: 100%|███████████████████████████████████| 250/250 [02:24<00:00,  1.73it/s]
+Hallucination eval: 100%|████████████████████████████████| 250/250 [03:18<00:00,  1.26it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: deepseek-v4-flash
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 250
+False Refusal (%):      1.20
+Hallu (not abstain, %): 19.43
+Correct (%):             79.60
+Per-example JSON saved to: judge_results_new/guj/hi/results_deepseek-v4-flash_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_gujarati/precise/hi/sarvam-105b.jsonl --save_dir judge_results_new/guj/hi --judge_model gpt-4.1
+Loading data from model_outputs_gujarati/precise/hi/sarvam-105b.jsonl ...
+Loaded 250 examples.
+Abstention eval: 100%|███████████████████████████████████| 250/250 [02:37<00:00,  1.58it/s]
+Hallucination eval: 100%|████████████████████████████████| 250/250 [04:33<00:00,  1.09s/it]
+
+================================================================================
+ Evaluation Results for model answers tagged as: sarvam-105b
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 250
+False Refusal (%):      1.60
+Hallu (not abstain, %): 29.27
+Correct (%):             69.60
+Per-example JSON saved to: judge_results_new/guj/hi/results_sarvam-105b_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_gujarati/precise/hi/gpt-5.jsonl --save_dir judge_results_new/guj/hi --judge_model gpt-4.1
+Loading data from model_outputs_gujarati/precise/hi/gpt-5.jsonl ...
+Loaded 250 examples.
+Abstention eval: 100%|███████████████████████████████████| 250/250 [02:35<00:00,  1.61it/s]
+Hallucination eval: 100%|████████████████████████████████| 250/250 [03:35<00:00,  1.16it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: gpt-5
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 250
+False Refusal (%):      0.80
+Hallu (not abstain, %): 14.92
+Correct (%):             84.40
+Per-example JSON saved to: judge_results_new/guj/hi/results_gpt-5_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_gujarati/precise/hi/claude-sonnet-4-6.jsonl --save_dir judge_results_new/guj/hi --judge_model gpt-4.1
+Loading data from model_outputs_gujarati/precise/hi/claude-sonnet-4-6.jsonl ...
+Loaded 250 examples.
+Abstention eval: 100%|███████████████████████████████████| 250/250 [02:53<00:00,  1.44it/s]
+Hallucination eval: 100%|████████████████████████████████| 250/250 [02:32<00:00,  1.64it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: claude-sonnet-4-6
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 250
+False Refusal (%):      0.00
+Hallu (not abstain, %): 23.60
+Correct (%):             76.40
+Per-example JSON saved to: judge_results_new/guj/hi/results_claude-sonnet-4-6_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_gujarati/precise/hi/gemini-2.5-flash.jsonl --save_dir judge_results_new/guj/hi --judge_model gpt-4.1
+Loading data from model_outputs_gujarati/precise/hi/gemini-2.5-flash.jsonl ...
+Loaded 250 examples.
+Abstention eval: 100%|███████████████████████████████████| 250/250 [02:25<00:00,  1.72it/s]
+Hallucination eval: 100%|████████████████████████████████| 250/250 [02:35<00:00,  1.60it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: gemini-2.5-flash
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 250
+False Refusal (%):      2.80
+Hallu (not abstain, %): 19.34
+Correct (%):             78.40
+Per-example JSON saved to: judge_results_new/guj/hi/results_gemini-2.5-flash_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_gujarati/precise/hi/command-a.jsonl --save_dir judge_results_new/guj/hi --judge_model gpt-4.1
+Loading data from model_outputs_gujarati/precise/hi/command-a.jsonl ...
+Loaded 250 examples.
+Abstention eval: 100%|███████████████████████████████████| 250/250 [02:31<00:00,  1.65it/s]
+Hallucination eval: 100%|████████████████████████████████| 250/250 [03:44<00:00,  1.11it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: command-a
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 250
+False Refusal (%):      14.00
+Hallu (not abstain, %): 41.40
+Correct (%):             50.40
+Per-example JSON saved to: judge_results_new/guj/hi/results_command-a_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_gujarati/precise/hi/qwen-mt-plus.jsonl --save_dir judge_results_new/guj/hi --judge_model gpt-4.1
+Loading data from model_outputs_gujarati/precise/hi/qwen-mt-plus.jsonl ...
+Loaded 250 examples.
+Abstention eval: 100%|███████████████████████████████████| 250/250 [02:43<00:00,  1.53it/s]
+Hallucination eval: 100%|████████████████████████████████| 250/250 [03:12<00:00,  1.30it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: qwen-mt-plus
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 250
+False Refusal (%):      0.80
+Hallu (not abstain, %): 63.71
+Correct (%):             36.80
+Per-example JSON saved to: judge_results_new/guj/hi/results_qwen-mt-plus_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_gujarati/precise/hi/llama-4-maverick.jsonl --save_dir judge_results_new/guj/hi --judge_model gpt-4.1
+Loading data from model_outputs_gujarati/precise/hi/llama-4-maverick.jsonl ...
+Loaded 250 examples.
+Abstention eval: 100%|███████████████████████████████████| 250/250 [02:27<00:00,  1.70it/s]
+Hallucination eval: 100%|████████████████████████████████| 250/250 [03:07<00:00,  1.33it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: llama-4-maverick
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 250
+False Refusal (%):      0.00
+Hallu (not abstain, %): 32.80
+Correct (%):             67.20
+Per-example JSON saved to: judge_results_new/guj/hi/results_llama-4-maverick_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/en/deepseek-v4-flash.jsonl --save_dir judge_results_new/tam/en --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/en/deepseek-v4-flash.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:22<00:00,  1.56it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [03:20<00:00,  1.11it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: deepseek-v4-flash
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      7.66
+Hallu (not abstain, %): 85.85
+Correct (%):             13.06
+Per-example JSON saved to: judge_results_new/tam/en/results_deepseek-v4-flash_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/en/sarvam-105b.jsonl --save_dir judge_results_new/tam/en --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/en/sarvam-105b.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:18<00:00,  1.60it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [03:21<00:00,  1.10it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: sarvam-105b
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      7.66
+Hallu (not abstain, %): 88.29
+Correct (%):             10.81
+Per-example JSON saved to: judge_results_new/tam/en/results_sarvam-105b_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/en/gpt-5.jsonl --save_dir judge_results_new/tam/en --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/en/gpt-5.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [01:59<00:00,  1.86it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [03:16<00:00,  1.13it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: gpt-5
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      7.21
+Hallu (not abstain, %): 85.44
+Correct (%):             13.51
+Per-example JSON saved to: judge_results_new/tam/en/results_gpt-5_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/en/claude-sonnet-4-6.jsonl --save_dir judge_results_new/tam/en --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/en/claude-sonnet-4-6.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:20<00:00,  1.58it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [02:37<00:00,  1.41it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: claude-sonnet-4-6
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      6.31
+Hallu (not abstain, %): 86.06
+Correct (%):             13.06
+Per-example JSON saved to: judge_results_new/tam/en/results_claude-sonnet-4-6_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/en/gemini-2.5-flash.jsonl --save_dir judge_results_new/tam/en --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/en/gemini-2.5-flash.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:20<00:00,  1.58it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [03:15<00:00,  1.14it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: gemini
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      8.56
+Hallu (not abstain, %): 86.70
+Correct (%):             12.16
+Per-example JSON saved to: judge_results_new/tam/en/results_gemini-2.5-flash_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/en/command-a.jsonl --save_dir judge_results_new/tam/en --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/en/command-a.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:14<00:00,  1.65it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [02:57<00:00,  1.25it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: command-a
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      19.82
+Hallu (not abstain, %): 87.64
+Correct (%):             9.91
+Per-example JSON saved to: judge_results_new/tam/en/results_command-a_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/en/qwen-mt-plus.jsonl --save_dir judge_results_new/tam/en --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/en/qwen-mt-plus.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:48<00:00,  1.32it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [02:36<00:00,  1.42it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: qwen-mt-plus
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      2.25
+Hallu (not abstain, %): 54.38
+Correct (%):             45.05
+Per-example JSON saved to: judge_results_new/tam/en/results_qwen-mt-plus_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/en/llama-4-maverick.jsonl --save_dir judge_results_new/tam/en --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/en/llama-4-maverick.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:29<00:00,  1.49it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [04:12<00:00,  1.14s/it]
+
+================================================================================
+ Evaluation Results for model answers tagged as: llama-4-maverick
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      0.45
+Hallu (not abstain, %): 26.70
+Correct (%):             72.97
+Per-example JSON saved to: judge_results_new/tam/en/results_llama-4-maverick_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/ta/deepseek-v4-flash.jsonl --save_dir judge_results_new/tam/ta --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/ta/deepseek-v4-flash.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:15<00:00,  1.64it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [03:45<00:00,  1.02s/it]
+
+================================================================================
+ Evaluation Results for model answers tagged as: deepseek-v4-flash
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      11.26
+Hallu (not abstain, %): 84.77
+Correct (%):             13.51
+Per-example JSON saved to: judge_results_new/tam/ta/results_deepseek-v4-flash_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/ta/sarvam-105b.jsonl --save_dir judge_results_new/tam/ta --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/ta/sarvam-105b.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:17<00:00,  1.62it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [04:16<00:00,  1.15s/it]
+
+================================================================================
+ Evaluation Results for model answers tagged as: sarvam
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      100.00
+Hallu (not abstain, %): 0.00
+Correct (%):             0.00
+Per-example JSON saved to: judge_results_new/tam/ta/results_sarvam-105b_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/ta/gpt-5.jsonl --save_dir judge_results_new/tam/ta --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/ta/gpt-5.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:11<00:00,  1.69it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [02:40<00:00,  1.39it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: gpt-5
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      11.26
+Hallu (not abstain, %): 85.28
+Correct (%):             13.06
+Per-example JSON saved to: judge_results_new/tam/ta/results_gpt-5_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/ta/claude-sonnet-4-6.jsonl --save_dir judge_results_new/tam/ta --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/ta/claude-sonnet-4-6.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:58<00:00,  1.25it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [03:33<00:00,  1.04it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: claude-sonnet-4-6
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      9.91
+Hallu (not abstain, %): 87.00
+Correct (%):             11.71
+Per-example JSON saved to: judge_results_new/tam/ta/results_claude-sonnet-4-6_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/ta/gemini-2.5-flash.jsonl --save_dir judge_results_new/tam/ta --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/ta/gemini-2.5-flash.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:28<00:00,  1.49it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [03:42<00:00,  1.00s/it]
+
+================================================================================
+ Evaluation Results for model answers tagged as: gemini
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      10.81
+Hallu (not abstain, %): 85.86
+Correct (%):             12.61
+Per-example JSON saved to: judge_results_new/tam/ta/results_gemini-2.5-flash_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/ta/command-a.jsonl --save_dir judge_results_new/tam/ta --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/ta/command-a.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:14<00:00,  1.65it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [02:57<00:00,  1.25it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: command-a
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      24.32
+Hallu (not abstain, %): 90.48
+Correct (%):             9.91
+Per-example JSON saved to: judge_results_new/tam/ta/results_command-a_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/ta/qwen-mt-plus.jsonl --save_dir judge_results_new/tam/ta --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/ta/qwen-mt-plus.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [01:51<00:00,  1.98it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [02:46<00:00,  1.33it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: qwen-mt-plus
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      1.35
+Hallu (not abstain, %): 68.04
+Correct (%):             31.98
+Per-example JSON saved to: judge_results_new/tam/ta/results_qwen-mt-plus_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/ta/llama-4-maverick.jsonl --save_dir judge_results_new/tam/ta --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/ta/llama-4-maverick.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:42<00:00,  1.36it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [03:13<00:00,  1.15it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: llama-4-maverick
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      0.00
+Hallu (not abstain, %): 38.74
+Correct (%):             61.26
+Per-example JSON saved to: judge_results_new/tam/ta/results_llama-4-maverick_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/hi/deepseek-v4-flash.jsonl --save_dir judge_results_new/tam/hi --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/hi/deepseek-v4-flash.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:44<00:00,  1.35it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [02:39<00:00,  1.39it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: deepseek-v4-flash
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      0.00
+Hallu (not abstain, %): 14.41
+Correct (%):             85.59
+Per-example JSON saved to: judge_results_new/tam/hi/results_deepseek-v4-flash_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/hi/sarvam-105b.jsonl --save_dir judge_results_new/tam/hi --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/hi/sarvam-105b.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:39<00:00,  1.39it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [02:25<00:00,  1.53it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: sarvam-105b
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      0.90
+Hallu (not abstain, %): 27.73
+Correct (%):             71.62
+Per-example JSON saved to: judge_results_new/tam/hi/results_sarvam-105b_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/hi/gpt-5.jsonl --save_dir judge_results_new/tam/hi --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/hi/gpt-5.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:39<00:00,  1.39it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [02:25<00:00,  1.52it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: gpt-5
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      0.00
+Hallu (not abstain, %): 7.21
+Correct (%):             92.79
+Per-example JSON saved to: judge_results_new/tam/hi/results_gpt-5_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/hi/claude-sonnet-4-6.jsonl --save_dir judge_results_new/tam/hi --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/hi/claude-sonnet-4-6.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:28<00:00,  1.49it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [03:10<00:00,  1.17it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: claude-sonnet-4-6
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      0.45
+Hallu (not abstain, %): 17.65
+Correct (%):             81.98
+Per-example JSON saved to: judge_results_new/tam/hi/results_claude-sonnet-4-6_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/hi/gemini-2.5-flash.jsonl --save_dir judge_results_new/tam/hi --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/hi/gemini-2.5-flash.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:09<00:00,  1.71it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [03:13<00:00,  1.15it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: gemini
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      1.35
+Hallu (not abstain, %): 11.87
+Correct (%):             86.94
+Per-example JSON saved to: judge_results_new/tam/hi/results_gemini-2.5-flash_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/hi/command-a.jsonl --save_dir judge_results_new/tam/hi --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/hi/command-a.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:42<00:00,  1.36it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [02:59<00:00,  1.24it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: command-a
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      9.46
+Hallu (not abstain, %): 43.78
+Correct (%):             50.90
+Per-example JSON saved to: judge_results_new/tam/hi/results_command-a_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/hi/qwen-mt-plus.jsonl --save_dir judge_results_new/tam/hi --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/hi/qwen-mt-plus.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:21<00:00,  1.57it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [02:46<00:00,  1.33it/s]
+
+================================================================================
+ Evaluation Results for model answers tagged as: qwen-mt-plus
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      2.25
+Hallu (not abstain, %): 71.89
+Correct (%):             27.48
+Per-example JSON saved to: judge_results_new/tam/hi/results_qwen-mt-plus_gpt-4.1.json
+================================================================================
+Running: python3 eval_precisewiki.py --data_path model_outputs_tamil/precise_ta/hi/llama-4-maverick.jsonl --save_dir judge_results_new/tam/hi --judge_model gpt-4.1
+Loading data from model_outputs_tamil/precise_ta/hi/llama-4-maverick.jsonl ...
+Loaded 222 examples.
+Abstention eval: 100%|███████████████████████████████████| 222/222 [02:17<00:00,  1.61it/s]
+Hallucination eval: 100%|████████████████████████████████| 222/222 [04:03<00:00,  1.10s/it]
+
+================================================================================
+ Evaluation Results for model answers tagged as: llama-4-maverick
+ Judge model: gpt-4.1
+================================================================================
+Total samples: 222
+False Refusal (%):      0.45
+Hallu (not abstain, %): 34.84
+Correct (%):             64.86
+Per-example JSON saved to: judge_results_new/tam/hi/results_llama-4-maverick_gpt-4.1.json
+================================================================================
