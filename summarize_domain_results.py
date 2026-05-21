@@ -30,6 +30,7 @@ DOMAIN_COLUMNS = [
 CULTURE_COLUMNS = [
     "culture",
     "dataset_type",
+    "canonical_domain",
     "total",
     "refusals",
     "non_refusals",
@@ -57,6 +58,39 @@ CULTURES = {
     },
 }
 
+CANONICAL_DOMAINS = {
+    "Food & Cuisine": {
+        "food & cuisine",
+        "भोजन एवं व्यंजन",
+        "ખોરાક અને ભોજન",
+        "உணவு & சமையல்",
+    },
+    "Geography": {
+        "geography",
+        "भूगोल",
+        "ભૂગોળ",
+        "புவியியல்",
+    },
+    "History": {
+        "history",
+        "इतिहास",
+        "ઈતિહાસ",
+        "வரலாறு",
+    },
+    "Festivals": {
+        "festivals",
+        "समारोह",
+        "તહેવારો",
+        "திருவிழாக்கள்",
+    },
+}
+
+DOMAIN_TO_CANONICAL = {
+    variant.casefold(): canonical
+    for canonical, variants in CANONICAL_DOMAINS.items()
+    for variant in variants
+}
+
 
 @dataclass
 class BuildResult:
@@ -76,6 +110,11 @@ def normalize_dataset_type(value):
 
 def normalize_cell(value):
     return "" if value is None else str(value).strip()
+
+
+def canonical_domain(domain):
+    normalized = normalize_cell(domain)
+    return DOMAIN_TO_CANONICAL.get(normalized.casefold(), normalized or "unknown")
 
 
 def read_jsonl(path):
@@ -249,6 +288,35 @@ def metric_row(group_key, rows):
     return result
 
 
+def build_domain_rows(example_rows):
+    domain_groups = defaultdict(list)
+    for row in example_rows:
+        domain_key = {
+            "culture": row["culture"],
+            "dataset_type": row["dataset_type"],
+            "language": row["language"],
+            "domain": row["domain"],
+            "model": row["model"],
+            "judge_model": row["judge_model"],
+        }
+        domain_groups[tuple(domain_key.items())].append(row)
+
+    return [metric_row(dict(key), rows) for key, rows in sorted(domain_groups.items())]
+
+
+def build_culture_rows(example_rows):
+    culture_groups = defaultdict(list)
+    for row in example_rows:
+        culture_key = {
+            "culture": row["culture"],
+            "dataset_type": row["dataset_type"],
+            "canonical_domain": canonical_domain(row["domain"]),
+        }
+        culture_groups[tuple(culture_key.items())].append(row)
+
+    return [metric_row(dict(key), rows) for key, rows in sorted(culture_groups.items())]
+
+
 def build_tables(root):
     root = Path(root)
     example_rows = []
@@ -316,30 +384,8 @@ def build_tables(root):
                     }
                 )
 
-    domain_groups = defaultdict(list)
-    culture_groups = defaultdict(list)
-    for row in example_rows:
-        domain_key = {
-            "culture": row["culture"],
-            "dataset_type": row["dataset_type"],
-            "language": row["language"],
-            "domain": row["domain"],
-            "model": row["model"],
-            "judge_model": row["judge_model"],
-        }
-        culture_key = {
-            "culture": row["culture"],
-            "dataset_type": row["dataset_type"],
-        }
-        domain_groups[tuple(domain_key.items())].append(row)
-        culture_groups[tuple(culture_key.items())].append(row)
-
-    domain_rows = [
-        metric_row(dict(key), rows) for key, rows in sorted(domain_groups.items())
-    ]
-    culture_rows = [
-        metric_row(dict(key), rows) for key, rows in sorted(culture_groups.items())
-    ]
+    domain_rows = build_domain_rows(example_rows)
+    culture_rows = build_culture_rows(example_rows)
     return BuildResult(domain_rows, culture_rows, skipped_pairs)
 
 

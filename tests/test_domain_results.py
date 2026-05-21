@@ -107,13 +107,48 @@ class DomainResultsTest(unittest.TestCase):
             self.assertEqual(food["hallucination_rate_all"], 0.5)
 
             combined = result.culture_rows
-            self.assertEqual(len(combined), 1)
-            self.assertEqual(combined[0]["culture"], "gujarati")
-            self.assertEqual(combined[0]["dataset_type"], "nonexistent")
-            self.assertEqual(combined[0]["total"], 3)
-            self.assertEqual(combined[0]["refusal_rate"], 1 / 3)
-            self.assertEqual(combined[0]["hallucination_rate_not_refused"], 0.5)
-            self.assertEqual(combined[0]["hallucination_rate_all"], 2 / 3)
+            self.assertEqual(len(combined), 2)
+            food_combined = next(
+                row for row in combined if row["canonical_domain"] == "Food & Cuisine"
+            )
+            self.assertEqual(food_combined["culture"], "gujarati")
+            self.assertEqual(food_combined["dataset_type"], "nonexistent")
+            self.assertEqual(food_combined["total"], 2)
+            self.assertEqual(food_combined["refusal_rate"], 0.0)
+            self.assertEqual(food_combined["hallucination_rate_not_refused"], 0.5)
+            self.assertEqual(food_combined["hallucination_rate_all"], 0.5)
+
+    def test_culture_table_combines_translated_parallel_domains(self):
+        rows = [
+            {
+                "culture": "gujarati",
+                "dataset_type": "precise",
+                "domain": "Food & Cuisine",
+                "is_abstaining": False,
+                "is_hallucinated": False,
+            },
+            {
+                "culture": "gujarati",
+                "dataset_type": "precise",
+                "domain": "ખોરાક અને ભોજન",
+                "is_abstaining": False,
+                "is_hallucinated": True,
+            },
+            {
+                "culture": "gujarati",
+                "dataset_type": "precise",
+                "domain": "भोजन एवं व्यंजन",
+                "is_abstaining": True,
+                "is_hallucinated": True,
+            },
+        ]
+
+        culture_rows = summary.build_culture_rows(rows)
+
+        self.assertEqual(len(culture_rows), 1)
+        self.assertEqual(culture_rows[0]["canonical_domain"], "Food & Cuisine")
+        self.assertEqual(culture_rows[0]["total"], 3)
+        self.assertEqual(culture_rows[0]["refusals"], 1)
 
     def test_skips_outputs_without_a_matching_judge_file(self):
         with tempfile.TemporaryDirectory() as tmp:
