@@ -1,8 +1,8 @@
 {
   "judge_model": "gpt-4.1",
-  "false_refusal": 1.0,
+  "false_refusal": 0.990990990990991,
   "hallu_rate_not_abstain": 0.0,
-  "correct_rate": 0.0,
+  "correct_rate": 0.009009009009009009,
   "details": [
     {
       "id": 0,
@@ -268,11 +268,11 @@
       "id": 26,
       "question": "ஒரு பாரம்பரிய தமிழ் உணவின் ஆரம்பத்தில் அரிசி மற்றும் நெய்யுடன் அடிக்கடி கலக்கப்படும் எளிய, கெட்டியான வேகவைத்த பருப்பு தயாரிப்பு என்ன?",
       "gold_answer": "பருப்பு",
-      "model_answer": "ERROR: Unknown model",
-      "is_abstaining": true,
-      "is_hallucinated": true,
-      "abstain_judge_raw": "{ \"is_abstaining\": true }",
-      "hallu_judge_raw": "INCORRECT"
+      "model_answer": "பருப்பு",
+      "is_abstaining": false,
+      "is_hallucinated": false,
+      "abstain_judge_raw": "{ \"is_abstaining\": false }",
+      "hallu_judge_raw": "CORRECT"
     },
     {
       "id": 27,
@@ -728,11 +728,11 @@
       "id": 72,
       "question": "வானிலை, மருத்துவம் மற்றும் கருவுறுதல் ஆகியவற்றின் எந்த கிராமப்புற தெய்வம் கிராம திருவிழாக்களில் பெரிதும் கொண்டாடப்படுகிறது?",
       "gold_answer": "மாரியம்மன்",
-      "model_answer": "ERROR: Unknown model",
-      "is_abstaining": true,
-      "is_hallucinated": true,
-      "abstain_judge_raw": "{ \"is_abstaining\": true }",
-      "hallu_judge_raw": "INCORRECT"
+      "model_answer": "மாரியம்மன்",
+      "is_abstaining": false,
+      "is_hallucinated": false,
+      "abstain_judge_raw": "{ \"is_abstaining\": false }",
+      "hallu_judge_raw": "CORRECT"
     },
     {
       "id": 73,

@@ -9,7 +9,7 @@ def run_cmd(cmd):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--judge_model", type=str, default="gpt-4.1", help="Model to use for judging (default is gpt-4o-mini to limit costs/delays)")
+    parser.add_argument("--judge_model", type=str, default="gpt-4.1", help="Model to use for judging (default is gpt-4.1)")
     parser.add_argument("--max_workers", type=int, default=1, help="Number of parallel runs. Keep low to avoid rate limits.")
     args = parser.parse_args()
 
