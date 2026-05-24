@@ -199,44 +199,44 @@ Per-Domain Breakdown:
 ======================================================================
 
 [claude-sonnet-4-6]
-Overall Metrics -> Acc: 13.1% | Hallucination Rate: 86.1% | False Refusal: 6.3%
+Overall Metrics -> Acc: 88.7% | Hallucination Rate: 10.9% | False Refusal: 0.5%
 Per-Domain Breakdown:
-  - Festivals                          : Acc =  2.0%  |  Hallu = 97.6%  |  False Refusal = 17.6%  (n=51)
-  - Food & Cuisine                     : Acc = 78.1%  |  Hallu = 21.9%  |  False Refusal =  0.0%  (n=32)
-  - Geography                          : Acc =  2.5%  |  Hallu = 97.4%  |  False Refusal =  3.3%  (n=121)
-  - History                            : Acc =  0.0%  |  Hallu = 100.0%  |  False Refusal =  5.6%  (n=18)
+  - Festivals                          : Acc = 94.1%  |  Hallu =  5.9%  |  False Refusal =  0.0%  (n=51)
+  - Food & Cuisine                     : Acc = 93.8%  |  Hallu =  6.2%  |  False Refusal =  0.0%  (n=32)
+  - Geography                          : Acc = 84.3%  |  Hallu = 15.0%  |  False Refusal =  0.8%  (n=121)
+  - History                            : Acc = 94.4%  |  Hallu =  5.6%  |  False Refusal =  0.0%  (n=18)
 
 [command-a]
-Overall Metrics -> Acc: 9.9% | Hallucination Rate: 87.6% | False Refusal: 19.8%
+Overall Metrics -> Acc: 70.7% | Hallucination Rate: 21.7% | False Refusal: 10.8%
 Per-Domain Breakdown:
-  - Festivals                          : Acc =  2.0%  |  Hallu = 97.5%  |  False Refusal = 21.6%  (n=51)
-  - Food & Cuisine                     : Acc = 59.4%  |  Hallu = 34.5%  |  False Refusal =  9.4%  (n=32)
-  - Geography                          : Acc =  1.7%  |  Hallu = 97.9%  |  False Refusal = 22.3%  (n=121)
-  - History                            : Acc =  0.0%  |  Hallu = 100.0%  |  False Refusal = 16.7%  (n=18)
+  - Festivals                          : Acc = 76.5%  |  Hallu = 17.0%  |  False Refusal =  7.8%  (n=51)
+  - Food & Cuisine                     : Acc = 68.8%  |  Hallu = 24.1%  |  False Refusal =  9.4%  (n=32)
+  - Geography                          : Acc = 63.6%  |  Hallu = 26.0%  |  False Refusal = 14.0%  (n=121)
+  - History                            : Acc = 94.4%  |  Hallu =  5.6%  |  False Refusal =  0.0%  (n=18)
 
 [deepseek-v4-flash]
-Overall Metrics -> Acc: 13.1% | Hallucination Rate: 85.9% | False Refusal: 7.7%
+Overall Metrics -> Acc: 90.1% | Hallucination Rate: 9.5% | False Refusal: 0.5%
 Per-Domain Breakdown:
-  - Festivals                          : Acc =  2.0%  |  Hallu = 97.7%  |  False Refusal = 13.7%  (n=51)
-  - Food & Cuisine                     : Acc = 81.2%  |  Hallu = 18.8%  |  False Refusal =  0.0%  (n=32)
-  - Geography                          : Acc =  1.7%  |  Hallu = 98.2%  |  False Refusal =  7.4%  (n=121)
-  - History                            : Acc =  0.0%  |  Hallu = 100.0%  |  False Refusal =  5.6%  (n=18)
+  - Festivals                          : Acc = 98.0%  |  Hallu =  2.0%  |  False Refusal =  0.0%  (n=51)
+  - Food & Cuisine                     : Acc = 96.9%  |  Hallu =  3.1%  |  False Refusal =  0.0%  (n=32)
+  - Geography                          : Acc = 84.3%  |  Hallu = 15.0%  |  False Refusal =  0.8%  (n=121)
+  - History                            : Acc = 94.4%  |  Hallu =  5.6%  |  False Refusal =  0.0%  (n=18)
 
 [gemini-2.5-flash]
-Overall Metrics -> Acc: 12.2% | Hallucination Rate: 86.7% | False Refusal: 8.6%
+Overall Metrics -> Acc: 90.5% | Hallucination Rate: 7.8% | False Refusal: 1.8%
 Per-Domain Breakdown:
-  - Festivals                          : Acc =  2.0%  |  Hallu = 97.7%  |  False Refusal = 13.7%  (n=51)
-  - Food & Cuisine                     : Acc = 71.9%  |  Hallu = 28.1%  |  False Refusal =  0.0%  (n=32)
-  - Geography                          : Acc =  2.5%  |  Hallu = 97.3%  |  False Refusal =  9.1%  (n=121)
-  - History                            : Acc =  0.0%  |  Hallu = 100.0%  |  False Refusal =  5.6%  (n=18)
+  - Festivals                          : Acc = 98.0%  |  Hallu =  2.0%  |  False Refusal =  0.0%  (n=51)
+  - Food & Cuisine                     : Acc = 90.6%  |  Hallu =  9.4%  |  False Refusal =  0.0%  (n=32)
+  - Geography                          : Acc = 86.8%  |  Hallu = 10.3%  |  False Refusal =  3.3%  (n=121)
+  - History                            : Acc = 94.4%  |  Hallu =  5.6%  |  False Refusal =  0.0%  (n=18)
 
 [gpt-5]
-Overall Metrics -> Acc: 13.5% | Hallucination Rate: 85.4% | False Refusal: 7.2%
+Overall Metrics -> Acc: 95.5% | Hallucination Rate: 4.5% | False Refusal: 0.0%
 Per-Domain Breakdown:
-  - Festivals                          : Acc =  2.0%  |  Hallu = 97.7%  |  False Refusal = 13.7%  (n=51)
-  - Food & Cuisine                     : Acc = 81.2%  |  Hallu = 18.8%  |  False Refusal =  0.0%  (n=32)
-  - Geography                          : Acc =  2.5%  |  Hallu = 97.3%  |  False Refusal =  7.4%  (n=121)
-  - History                            : Acc =  0.0%  |  Hallu = 100.0%  |  False Refusal =  0.0%  (n=18)
+  - Festivals                          : Acc = 100.0%  |  Hallu =  0.0%  |  False Refusal =  0.0%  (n=51)
+  - Food & Cuisine                     : Acc = 100.0%  |  Hallu =  0.0%  |  False Refusal =  0.0%  (n=32)
+  - Geography                          : Acc = 92.6%  |  Hallu =  7.4%  |  False Refusal =  0.0%  (n=121)
+  - History                            : Acc = 94.4%  |  Hallu =  5.6%  |  False Refusal =  0.0%  (n=18)
 
 [llama-4-maverick]
 Overall Metrics -> Acc: 73.0% | Hallucination Rate: 26.7% | False Refusal: 0.5%
@@ -255,56 +255,56 @@ Per-Domain Breakdown:
   - History                            : Acc = 77.8%  |  Hallu = 22.2%  |  False Refusal =  0.0%  (n=18)
 
 [sarvam-105b]
-Overall Metrics -> Acc: 10.8% | Hallucination Rate: 88.3% | False Refusal: 7.7%
+Overall Metrics -> Acc: 79.3% | Hallucination Rate: 20.0% | False Refusal: 0.9%
 Per-Domain Breakdown:
-  - Festivals                          : Acc =  2.0%  |  Hallu = 97.7%  |  False Refusal = 13.7%  (n=51)
-  - Food & Cuisine                     : Acc = 65.6%  |  Hallu = 34.4%  |  False Refusal =  0.0%  (n=32)
-  - Geography                          : Acc =  1.7%  |  Hallu = 98.2%  |  False Refusal =  6.6%  (n=121)
-  - History                            : Acc =  0.0%  |  Hallu = 100.0%  |  False Refusal = 11.1%  (n=18)
+  - Festivals                          : Acc = 92.2%  |  Hallu =  7.8%  |  False Refusal =  0.0%  (n=51)
+  - Food & Cuisine                     : Acc = 75.0%  |  Hallu = 25.0%  |  False Refusal =  0.0%  (n=32)
+  - Geography                          : Acc = 72.7%  |  Hallu = 26.1%  |  False Refusal =  1.7%  (n=121)
+  - History                            : Acc = 94.4%  |  Hallu =  5.6%  |  False Refusal =  0.0%  (n=18)
 
 ======================================================================
  Dataset: Tamil | Language: TA 
 ======================================================================
 
 [claude-sonnet-4-6]
-Overall Metrics -> Acc: 11.7% | Hallucination Rate: 87.0% | False Refusal: 9.9%
-Per-Domain Breakdown:
-  - உணவு & சமையல்                      : Acc = 68.8%  |  Hallu = 31.2%  |  False Refusal =  0.0%  (n=32)
-  - திருவிழாக்கள்                      : Acc =  2.0%  |  Hallu = 97.7%  |  False Refusal = 15.7%  (n=51)
-  - புவியியல்                          : Acc =  1.7%  |  Hallu = 98.2%  |  False Refusal =  9.9%  (n=121)
-  - வரலாறு                             : Acc =  5.6%  |  Hallu = 93.8%  |  False Refusal = 11.1%  (n=18)
-
-[command-a]
-Overall Metrics -> Acc: 9.9% | Hallucination Rate: 90.5% | False Refusal: 24.3%
-Per-Domain Breakdown:
-  - உணவு & சமையல்                      : Acc = 37.5%  |  Hallu = 60.0%  |  False Refusal =  6.2%  (n=32)
-  - திருவிழாக்கள்                      : Acc =  5.9%  |  Hallu = 93.0%  |  False Refusal = 15.7%  (n=51)
-  - புவியியல்                          : Acc =  0.8%  |  Hallu = 98.8%  |  False Refusal = 32.2%  (n=121)
-  - வரலாறு                             : Acc =  0.0%  |  Hallu = 100.0%  |  False Refusal = 27.8%  (n=18)
-
-[deepseek-v4-flash]
-Overall Metrics -> Acc: 13.5% | Hallucination Rate: 84.8% | False Refusal: 11.3%
+Overall Metrics -> Acc: 79.7% | Hallucination Rate: 20.3% | False Refusal: 0.0%
 Per-Domain Breakdown:
   - உணவு & சமையல்                      : Acc = 78.1%  |  Hallu = 21.9%  |  False Refusal =  0.0%  (n=32)
-  - திருவிழாக்கள்                      : Acc =  2.0%  |  Hallu = 97.7%  |  False Refusal = 15.7%  (n=51)
-  - புவியியல்                          : Acc =  2.5%  |  Hallu = 97.2%  |  False Refusal =  9.9%  (n=121)
-  - வரலாறு                             : Acc =  5.6%  |  Hallu = 92.3%  |  False Refusal = 27.8%  (n=18)
+  - திருவிழாக்கள்                      : Acc = 86.3%  |  Hallu = 13.7%  |  False Refusal =  0.0%  (n=51)
+  - புவியியல்                          : Acc = 74.4%  |  Hallu = 25.6%  |  False Refusal =  0.0%  (n=121)
+  - வரலாறு                             : Acc = 100.0%  |  Hallu =  0.0%  |  False Refusal =  0.0%  (n=18)
+
+[command-a]
+Overall Metrics -> Acc: 43.2% | Hallucination Rate: 51.6% | False Refusal: 15.3%
+Per-Domain Breakdown:
+  - உணவு & சமையல்                      : Acc = 37.5%  |  Hallu = 60.0%  |  False Refusal =  6.2%  (n=32)
+  - திருவிழாக்கள்                      : Acc = 56.9%  |  Hallu = 40.8%  |  False Refusal =  3.9%  (n=51)
+  - புவியியல்                          : Acc = 31.4%  |  Hallu = 58.2%  |  False Refusal = 24.8%  (n=121)
+  - வரலாறு                             : Acc = 66.7%  |  Hallu = 33.3%  |  False Refusal =  0.0%  (n=18)
+
+[deepseek-v4-flash]
+Overall Metrics -> Acc: 88.3% | Hallucination Rate: 10.9% | False Refusal: 0.9%
+Per-Domain Breakdown:
+  - உணவு & சமையல்                      : Acc = 84.4%  |  Hallu = 15.6%  |  False Refusal =  0.0%  (n=32)
+  - திருவிழாக்கள்                      : Acc = 98.0%  |  Hallu =  2.0%  |  False Refusal =  0.0%  (n=51)
+  - புவியியல்                          : Acc = 84.3%  |  Hallu = 14.3%  |  False Refusal =  1.7%  (n=121)
+  - வரலாறு                             : Acc = 94.4%  |  Hallu =  5.6%  |  False Refusal =  0.0%  (n=18)
 
 [gemini-2.5-flash]
-Overall Metrics -> Acc: 12.6% | Hallucination Rate: 85.9% | False Refusal: 10.8%
+Overall Metrics -> Acc: 86.0% | Hallucination Rate: 13.2% | False Refusal: 1.4%
 Per-Domain Breakdown:
-  - உணவு & சமையல்                      : Acc = 68.8%  |  Hallu = 29.0%  |  False Refusal =  3.1%  (n=32)
-  - திருவிழாக்கள்                      : Acc =  3.9%  |  Hallu = 95.6%  |  False Refusal = 11.8%  (n=51)
-  - புவியியல்                          : Acc =  2.5%  |  Hallu = 97.2%  |  False Refusal = 10.7%  (n=121)
-  - வரலாறு                             : Acc =  5.6%  |  Hallu = 92.9%  |  False Refusal = 22.2%  (n=18)
+  - உணவு & சமையல்                      : Acc = 87.5%  |  Hallu =  9.7%  |  False Refusal =  3.1%  (n=32)
+  - திருவிழாக்கள்                      : Acc = 86.3%  |  Hallu = 13.7%  |  False Refusal =  0.0%  (n=51)
+  - புவியியல்                          : Acc = 83.5%  |  Hallu = 15.1%  |  False Refusal =  1.7%  (n=121)
+  - வரலாறு                             : Acc = 94.4%  |  Hallu =  5.6%  |  False Refusal =  0.0%  (n=18)
 
 [gpt-5]
-Overall Metrics -> Acc: 13.1% | Hallucination Rate: 85.3% | False Refusal: 11.3%
+Overall Metrics -> Acc: 89.6% | Hallucination Rate: 10.4% | False Refusal: 0.0%
 Per-Domain Breakdown:
-  - உணவு & சமையல்                      : Acc = 75.0%  |  Hallu = 25.0%  |  False Refusal =  0.0%  (n=32)
-  - திருவிழாக்கள்                      : Acc =  2.0%  |  Hallu = 97.7%  |  False Refusal = 15.7%  (n=51)
-  - புவியியல்                          : Acc =  2.5%  |  Hallu = 97.2%  |  False Refusal = 12.4%  (n=121)
-  - வரலாறு                             : Acc =  5.6%  |  Hallu = 93.8%  |  False Refusal = 11.1%  (n=18)
+  - உணவு & சமையல்                      : Acc = 93.8%  |  Hallu =  6.2%  |  False Refusal =  0.0%  (n=32)
+  - திருவிழாக்கள்                      : Acc = 94.1%  |  Hallu =  5.9%  |  False Refusal =  0.0%  (n=51)
+  - புவியியல்                          : Acc = 86.0%  |  Hallu = 14.0%  |  False Refusal =  0.0%  (n=121)
+  - வரலாறு                             : Acc = 94.4%  |  Hallu =  5.6%  |  False Refusal =  0.0%  (n=18)
 
 [llama-4-maverick]
 Overall Metrics -> Acc: 61.3% | Hallucination Rate: 38.7% | False Refusal: 0.0%
@@ -323,10 +323,10 @@ Per-Domain Breakdown:
   - வரலாறு                             : Acc = 38.9%  |  Hallu = 58.8%  |  False Refusal =  5.6%  (n=18)
 
 [sarvam-105b]
-Overall Metrics -> Acc: 0.0% | Hallucination Rate: 0.0% | False Refusal: 100.0%
+Overall Metrics -> Acc: 0.9% | Hallucination Rate: 0.0% | False Refusal: 99.1%
 Per-Domain Breakdown:
-  - உணவு & சமையல்                      : Acc =  0.0%  |  Hallu =  0.0%  |  False Refusal = 100.0%  (n=32)
-  - திருவிழாக்கள்                      : Acc =  0.0%  |  Hallu =  0.0%  |  False Refusal = 100.0%  (n=51)
+  - உணவு & சமையல்                      : Acc =  3.1%  |  Hallu =  0.0%  |  False Refusal = 96.9%  (n=32)
+  - திருவிழாக்கள்                      : Acc =  2.0%  |  Hallu =  0.0%  |  False Refusal = 98.0%  (n=51)
   - புவியியல்                          : Acc =  0.0%  |  Hallu =  0.0%  |  False Refusal = 100.0%  (n=121)
   - வரலாறு                             : Acc =  0.0%  |  Hallu =  0.0%  |  False Refusal = 100.0%  (n=18)
 
@@ -335,44 +335,44 @@ Per-Domain Breakdown:
 ======================================================================
 
 [claude-sonnet-4-6]
-Overall Metrics -> Acc: 82.0% | Hallucination Rate: 17.6% | False Refusal: 0.5%
+Overall Metrics -> Acc: 11.3% | Hallucination Rate: 86.8% | False Refusal: 14.4%
 Per-Domain Breakdown:
-  - इतिहास                             : Acc = 88.9%  |  Hallu = 11.1%  |  False Refusal =  0.0%  (n=18)
-  - भूगोल                              : Acc = 78.2%  |  Hallu = 21.2%  |  False Refusal =  0.8%  (n=119)
-  - भोजन एवं व्यंजन                    : Acc = 84.8%  |  Hallu = 15.2%  |  False Refusal =  0.0%  (n=33)
-  - समारोह                             : Acc = 86.5%  |  Hallu = 13.5%  |  False Refusal =  0.0%  (n=52)
+  - इतिहास                             : Acc =  0.0%  |  Hallu = 100.0%  |  False Refusal = 16.7%  (n=18)
+  - भूगोल                              : Acc =  0.8%  |  Hallu = 99.0%  |  False Refusal = 12.6%  (n=119)
+  - भोजन एवं व्यंजन                    : Acc = 72.7%  |  Hallu = 27.3%  |  False Refusal =  0.0%  (n=33)
+  - समारोह                             : Acc =  0.0%  |  Hallu = 100.0%  |  False Refusal = 26.9%  (n=52)
 
 [command-a]
-Overall Metrics -> Acc: 50.9% | Hallucination Rate: 43.8% | False Refusal: 9.5%
+Overall Metrics -> Acc: 7.7% | Hallucination Rate: 90.9% | False Refusal: 21.2%
 Per-Domain Breakdown:
-  - इतिहास                             : Acc = 55.6%  |  Hallu = 41.2%  |  False Refusal =  5.6%  (n=18)
-  - भूगोल                              : Acc = 48.7%  |  Hallu = 45.3%  |  False Refusal = 10.9%  (n=119)
-  - भोजन एवं व्यंजन                    : Acc = 42.4%  |  Hallu = 51.7%  |  False Refusal = 12.1%  (n=33)
-  - समारोह                             : Acc = 59.6%  |  Hallu = 36.7%  |  False Refusal =  5.8%  (n=52)
+  - इतिहास                             : Acc =  0.0%  |  Hallu = 100.0%  |  False Refusal = 22.2%  (n=18)
+  - भूगोल                              : Acc =  0.8%  |  Hallu = 98.9%  |  False Refusal = 21.0%  (n=119)
+  - भोजन एवं व्यंजन                    : Acc = 39.4%  |  Hallu = 55.2%  |  False Refusal = 12.1%  (n=33)
+  - समारोह                             : Acc =  3.8%  |  Hallu = 94.7%  |  False Refusal = 26.9%  (n=52)
 
 [deepseek-v4-flash]
-Overall Metrics -> Acc: 85.6% | Hallucination Rate: 14.4% | False Refusal: 0.0%
+Overall Metrics -> Acc: 12.6% | Hallucination Rate: 85.7% | False Refusal: 11.7%
 Per-Domain Breakdown:
-  - इतिहास                             : Acc = 94.4%  |  Hallu =  5.6%  |  False Refusal =  0.0%  (n=18)
-  - भूगोल                              : Acc = 79.0%  |  Hallu = 21.0%  |  False Refusal =  0.0%  (n=119)
-  - भोजन एवं व्यंजन                    : Acc = 90.9%  |  Hallu =  9.1%  |  False Refusal =  0.0%  (n=33)
-  - समारोह                             : Acc = 94.2%  |  Hallu =  5.8%  |  False Refusal =  0.0%  (n=52)
+  - इतिहास                             : Acc =  0.0%  |  Hallu = 100.0%  |  False Refusal = 27.8%  (n=18)
+  - भूगोल                              : Acc =  0.0%  |  Hallu = 100.0%  |  False Refusal =  6.7%  (n=119)
+  - भोजन एवं व्यंजन                    : Acc = 81.8%  |  Hallu = 18.2%  |  False Refusal =  0.0%  (n=33)
+  - समारोह                             : Acc =  1.9%  |  Hallu = 97.4%  |  False Refusal = 25.0%  (n=52)
 
 [gemini-2.5-flash]
-Overall Metrics -> Acc: 86.9% | Hallucination Rate: 11.9% | False Refusal: 1.4%
+Overall Metrics -> Acc: 12.2% | Hallucination Rate: 85.5% | False Refusal: 16.2%
 Per-Domain Breakdown:
-  - इतिहास                             : Acc = 94.4%  |  Hallu =  5.6%  |  False Refusal =  0.0%  (n=18)
-  - भूगोल                              : Acc = 83.2%  |  Hallu = 14.7%  |  False Refusal =  2.5%  (n=119)
-  - भोजन एवं व्यंजन                    : Acc = 84.8%  |  Hallu = 15.2%  |  False Refusal =  0.0%  (n=33)
-  - समारोह                             : Acc = 94.2%  |  Hallu =  5.8%  |  False Refusal =  0.0%  (n=52)
+  - इतिहास                             : Acc =  5.6%  |  Hallu = 92.9%  |  False Refusal = 22.2%  (n=18)
+  - भूगोल                              : Acc =  0.0%  |  Hallu = 100.0%  |  False Refusal = 15.1%  (n=119)
+  - भोजन एवं व्यंजन                    : Acc = 75.8%  |  Hallu = 24.2%  |  False Refusal =  0.0%  (n=33)
+  - समारोह                             : Acc =  1.9%  |  Hallu = 97.4%  |  False Refusal = 26.9%  (n=52)
 
 [gpt-5]
-Overall Metrics -> Acc: 92.8% | Hallucination Rate: 7.2% | False Refusal: 0.0%
+Overall Metrics -> Acc: 13.1% | Hallucination Rate: 84.6% | False Refusal: 15.3%
 Per-Domain Breakdown:
-  - इतिहास                             : Acc = 94.4%  |  Hallu =  5.6%  |  False Refusal =  0.0%  (n=18)
-  - भूगोल                              : Acc = 89.1%  |  Hallu = 10.9%  |  False Refusal =  0.0%  (n=119)
-  - भोजन एवं व्यंजन                    : Acc = 97.0%  |  Hallu =  3.0%  |  False Refusal =  0.0%  (n=33)
-  - समारोह                             : Acc = 98.1%  |  Hallu =  1.9%  |  False Refusal =  0.0%  (n=52)
+  - इतिहास                             : Acc =  5.6%  |  Hallu = 93.3%  |  False Refusal = 16.7%  (n=18)
+  - भूगोल                              : Acc =  0.8%  |  Hallu = 99.0%  |  False Refusal = 16.0%  (n=119)
+  - भोजन एवं व्यंजन                    : Acc = 78.8%  |  Hallu = 21.2%  |  False Refusal =  0.0%  (n=33)
+  - समारोह                             : Acc =  1.9%  |  Hallu = 97.5%  |  False Refusal = 23.1%  (n=52)
 
 [llama-4-maverick]
 Overall Metrics -> Acc: 64.9% | Hallucination Rate: 34.8% | False Refusal: 0.5%
@@ -391,9 +391,9 @@ Per-Domain Breakdown:
   - समारोह                             : Acc = 30.8%  |  Hallu = 68.6%  |  False Refusal =  1.9%  (n=52)
 
 [sarvam-105b]
-Overall Metrics -> Acc: 71.6% | Hallucination Rate: 27.7% | False Refusal: 0.9%
+Overall Metrics -> Acc: 11.3% | Hallucination Rate: 87.2% | False Refusal: 11.7%
 Per-Domain Breakdown:
-  - इतिहास                             : Acc = 88.9%  |  Hallu = 11.1%  |  False Refusal =  0.0%  (n=18)
-  - भूगोल                              : Acc = 68.9%  |  Hallu = 29.9%  |  False Refusal =  1.7%  (n=119)
-  - भोजन एवं व्यंजन                    : Acc = 72.7%  |  Hallu = 27.3%  |  False Refusal =  0.0%  (n=33)
-  - समारोह                             : Acc = 71.2%  |  Hallu = 28.8%  |  False Refusal =  0.0%  (n=52)
+  - इतिहास                             : Acc =  5.6%  |  Hallu = 93.3%  |  False Refusal = 16.7%  (n=18)
+  - भूगोल                              : Acc =  0.8%  |  Hallu = 99.1%  |  False Refusal = 10.1%  (n=119)
+  - भोजन एवं व्यंजन                    : Acc = 63.6%  |  Hallu = 36.4%  |  False Refusal =  0.0%  (n=33)
+  - समारोह                             : Acc =  3.8%  |  Hallu = 95.1%  |  False Refusal = 21.2%  (n=52)

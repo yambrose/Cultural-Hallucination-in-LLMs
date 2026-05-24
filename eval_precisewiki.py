@@ -216,7 +216,7 @@ def main():
     parser.add_argument(
         "--judge_model",
         type=str,
-        default="gpt-4.1",   # or "gpt-4o-mini", "gpt-5.1-chat-latest", etc.
+        default="gpt-4o-mini",   # or "gpt-4o-mini", "gpt-5.1-chat-latest", etc.
         help="OpenAI model name used as judge.",
     )
     parser.add_argument(
